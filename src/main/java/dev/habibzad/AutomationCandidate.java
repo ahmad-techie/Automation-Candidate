@@ -1,5 +1,7 @@
 package dev.habibzad;
 
+import dev.habibzad.model.*;
+
 import java.util.*;
 
 public class AutomationCandidate {
@@ -31,11 +33,6 @@ public class AutomationCandidate {
             for (Criteria criteria : r.criteriaList) {
                 criteria.askQuestions();
                 int score = criteria.getScore();
-//                if (automationCandidate.containsKey(scenario)){
-//                    automationCandidate.put(scenario, automationCandidate.get(scenario)+score);
-//                }else {
-//                    automationCandidate.put(scenario, score);
-//                }
                 automationCandidate.compute(scenario, (key, value) -> (value == null) ? score : value + score);
             }
         }

@@ -1,4 +1,4 @@
-package dev.habibzad;
+package dev.habibzad.model;
 
 import java.util.Scanner;
 
