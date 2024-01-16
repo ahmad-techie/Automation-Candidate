@@ -15,7 +15,6 @@ public class AutomationCandidate {
 //    private static int query()
 
     public static void main(String[] args) {
-        // Add tweet, view tweet, pin tweet, follow a user, block a user, set username, update username, set location, view analytics of a tweet, balloons appear on birthday
         List<String> testScenarios = new ArrayList<>();
         while (true) {
             System.out.println("Add a scenario - Type 0 to quit");
