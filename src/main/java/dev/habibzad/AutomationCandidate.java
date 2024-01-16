@@ -12,8 +12,6 @@ public class AutomationCandidate {
         criteriaList.add(new CostEfficiency(scanner, "Cost-Efficiency", "Quickness - How quickly can this be scripted", "Ease How easy will it be to script this?"));
         criteriaList.add(new History(scanner, "History", "Similar to weak areas - Volume of historical failures in related areas", "Frequency of breaks - Volume of historical failures for this test"));
     }
-//    private static int query()
-
     public static void main(String[] args) {
         List<String> testScenarios = new ArrayList<>();
         while (true) {
