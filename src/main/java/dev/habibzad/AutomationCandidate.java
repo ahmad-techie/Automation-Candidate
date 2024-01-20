@@ -6,13 +6,14 @@ import java.util.*;
 
 public class AutomationCandidate {
     static Scanner scanner = new Scanner(System.in);
+
     private final List<Criteria> criteriaList = new ArrayList<>();
 
     private AutomationCandidate() {
-        criteriaList.add(new RiskToCustomer(scanner, "Risk to Customer", "Probability - Frequency of use by customer", "Impact - If broken, what’s the impact on the customer?"));
-        criteriaList.add(new ValueForTest(scanner, "Value for Test", "Distinctness - Does this test provide new info?", "Induction to Action - How quickly would this failure be fixed"));
-        criteriaList.add(new CostEfficiency(scanner, "Cost-Efficiency", "Quickness - How quickly can this be scripted", "Ease How easy will it be to script this?"));
-        criteriaList.add(new History(scanner, "History", "Similar to weak areas - Volume of historical failures in related areas", "Frequency of breaks - Volume of historical failures for this test"));
+        criteriaList.add(new RiskToCustomerFactor(scanner, "Risk to Customer", "Probability - Frequency of use by customer", "Impact - If broken, what’s the impact on the customer?"));
+        criteriaList.add(new ValueForTestFactor(scanner, "Value for Test", "Distinctness - Does this test provide new info?", "Induction to Action - How quickly would this failure be fixed"));
+        criteriaList.add(new CostEfficiencyFactor(scanner, "Cost-Efficiency", "Quickness - How quickly can this be scripted", "Ease How easy will it be to script this?"));
+        criteriaList.add(new HistoryFactor(scanner, "History", "Similar to weak areas - Volume of historical failures in related areas", "Frequency of breaks - Volume of historical failures for this test"));
     }
     public static void main(String[] args) {
         List<String> testScenarios = new ArrayList<>();
